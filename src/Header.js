@@ -3,11 +3,10 @@ import styled from 'styled-components'
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { Link } from 'react-router-dom';
 
 function Header() {
-
     return (
-
         <Container>
             <HeaderLogo>
                 <img src={"https://i.imgur.com/7I9Was5.png"}/>
@@ -40,10 +39,13 @@ function Header() {
                     <OptionLineTwo>& Orders</OptionLineTwo>
                 </HeaderOption>
 
-                <HeaderOptionCart>
-                    <ShoppingBasketIcon />
-                    <CartCount>5</CartCount>
-                </HeaderOptionCart>
+                <Link to="/cart">
+                    <HeaderOptionCart>
+                        <ShoppingBasketIcon />
+                        <CartCount>5</CartCount>
+                    </HeaderOptionCart>
+                </Link>
+
             </HeaderNavItems>
         </Container>
     )
