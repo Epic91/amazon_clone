@@ -39,12 +39,12 @@ function Header() {
                     <OptionLineTwo>& Orders</OptionLineTwo>
                 </HeaderOption>
 
-                <Link to="/cart">
-                    <HeaderOptionCart>
+                <HeaderOptionCart>
+                    <Link to="/cart">
                         <ShoppingBasketIcon />
                         <CartCount>5</CartCount>
-                    </HeaderOptionCart>
-                </Link>
+                    </Link>
+                </HeaderOptionCart>
 
             </HeaderNavItems>
         </Container>
@@ -122,8 +122,13 @@ const HeaderOption = styled.div `
 
 const HeaderOptionCart = styled.div `
     display: flex;
-    align-items: center;
-    padding-right: 9px;
+    a {
+        display: flex;
+        align-items: center;
+        padding-right: 9px;
+        color: white;
+        text-decoration: none;
+        }
 `
 
 const CartCount = styled.div`

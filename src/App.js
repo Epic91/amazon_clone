@@ -10,6 +10,7 @@ function App() {
       <div className="App">
         <Header />
           <Switch>
+
             <Route path='/cart'>
               <Cart />
             </Route >
@@ -17,6 +18,7 @@ function App() {
             <Route path='/'>
               <Home />
             </Route>
+            
           </Switch>
       </div>
     </Router>
